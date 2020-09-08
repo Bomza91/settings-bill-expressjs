@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/Bomza91/settings-bill-expressjs.svg?branch=master)](https://travis-ci.org/Bomza91/settings-bill-expressjs)
