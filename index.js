@@ -2,7 +2,7 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const SettingsBill = require('./settings-bill');
-// var moment = require('moment'); 
+var moment = require('moment'); 
 
 
 const app = express();
@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
     res.render('index', {
         settings: settingsBill.getSettings(),
         totals: settingsBill.totals(),
-        totalStyle: settingsBill.color()
+        totalStyle: settingsBill.color(),
         
     });
 });
@@ -44,9 +44,9 @@ app.post('/action', function (req, res) {
 
 app.get('/actions', function (req, res) {
     const actions = settingsBill.actions();
-    // for (action of actions) {
-    //     action.stringDate = moment(action.timestamp).fromNow();
-    // }
+    for (action of actions) {
+        action.stringDate = moment(action.timestamp).fromNow();
+    }
  
     res.render('actions', { actions });
 });
@@ -55,10 +55,10 @@ app.get('/actions/:actionType', function (req, res) {
     const actionType = req.params.actionType;
 
     const actions = settingsBill.actionsFor(actionType);
-    // for (action of actions) {
-    //     action.stringDate = moment(action.timestamp).fromNow();
+    for (action of actions) {
+        action.stringDate = moment(action.timestamp).fromNow();
         
-    // }
+    }
     res.render('actions', { actions });
 });
 
