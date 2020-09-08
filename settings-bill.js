@@ -78,7 +78,7 @@ if(!action){
 
     function hasReachedCriticalLevel() {
         const total = grandTotal();
-        const hasReachedCriticalLevel = total && total >= criticalLevel;
+        const hasReachedCriticalLevel = total && total > criticalLevel;
 
         return hasReachedCriticalLevel;
     }
@@ -114,6 +114,7 @@ if(!action){
         grandTotal,
         getTotal,
         hasReachedCriticalLevel,
+
     }
 }
 

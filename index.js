@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const SettingsBill = require('./settings-bill');
 var moment = require('moment'); 
 
+//moment is used to parse ,validate, manipulate, and display dates and times in Javascript
+//you can either download and include on an html file or you can install using node js
 
 const app = express();
 const settingsBill = SettingsBill(); 
@@ -21,7 +23,7 @@ app.get('/', function (req, res) {
     res.render('index', {
         settings: settingsBill.getSettings(),
         totals: settingsBill.totals(),
-        totalStyle: settingsBill.color(),
+        totalStyle: settingsBill.color()
         
     });
 });

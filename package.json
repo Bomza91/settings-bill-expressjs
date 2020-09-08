@@ -4,12 +4,10 @@
   "main": "index.js",
   "directories": {
     "test": "test"
-    
   },
   "scripts": {
     "test": "mocha",
     "start": "node index.js"
-
   },
   "keywords": [],
   "author": "",
@@ -18,11 +16,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "express-handlebars": "^5.1.0"
+    "express-handlebars": "^5.1.0",
+    "moment": "^2.27.0"
   }
 }
-
-
-
-
-
