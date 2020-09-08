@@ -2,8 +2,7 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const SettingsBill = require('./settings-bill');
-var moment = require('moment'); 
-
+var moment = require('moment'); 0
 //moment is used to parse ,validate, manipulate, and display dates and times in Javascript
 //you can either download and include on an html file or you can install using node js
 
